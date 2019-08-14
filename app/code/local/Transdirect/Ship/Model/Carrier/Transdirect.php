@@ -36,6 +36,7 @@ class Transdirect_Ship_Model_Carrier_Transdirect extends Mage_Shipping_Model_Car
 		$order_box_enable 		 = Mage::getStoreConfig('transdirect_section/orderbox/enableorderbox');
 		$order_box_size 		 = Mage::getStoreConfig('transdirect_section/orderbox/boxsize');
 		$couriers_name		 	 = Mage::getStoreConfig('transdirect_section/displayoptions/couriersname');
+		$redirect_url			 = Mage::getBaseUrl();
 
 		// Cart Total Weight Code Start by Nayan 
 		$quote = Mage::getSingleton('checkout/session')->getQuote();
@@ -223,6 +224,7 @@ class Transdirect_Ship_Model_Carrier_Transdirect extends Mage_Shipping_Model_Car
 			$quoteDetails = array(
 				'declared_value'=>10000,
 				'items' => $box_items,
+				'requesting_site' => $requesting_site,
 				'sender' => array(
 				 	'country' => 'AU', 
 				 	'suburb'=> $warehouse_suburb, 
@@ -240,6 +242,7 @@ class Transdirect_Ship_Model_Carrier_Transdirect extends Mage_Shipping_Model_Car
 		} else  {		
 			$quoteDetails = array(
 				'declared_value'=>10000, 
+				'requesting_site' => $requesting_site,
 				'items' => array(array(
 						 		'width' => $cart_total_width, 
 						 		'height' => $cart_total_height, 
