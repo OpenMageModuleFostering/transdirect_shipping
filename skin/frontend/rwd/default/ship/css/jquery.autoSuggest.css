@@ -6,13 +6,13 @@ ul.as-selections {
 	border-bottom: 1px solid #b6b6b6;
 	border-left: 1px solid #aaa;
 	border-right: 1px solid #aaa;
-	padding: 4px 0 4px 4px;
+	padding: 0 0 0 4px;
 	margin: 0;
 	overflow: auto;
 	background-color: #fff;
-	box-shadow:inset 0 1px 2px #888;
+	/*box-shadow:inset 0 1px 2px #888;
 	-webkit-box-shadow:inset 0 1px 2px #888;
-	-moz-box-shadow:inset 0 1px 2px #888;
+	-moz-box-shadow:inset 0 1px 2px #888;*/
 }
 
 ul.as-selections.loading {
@@ -21,27 +21,28 @@ ul.as-selections.loading {
 
 ul.as-selections li {
 	float: left;
-	margin: 1px 4px 1px 0;
-	width:90%;
+	margin: 0px 4px 0px 0;
+	/*width:90%;*/
+	width:91%;
 }
 
 ul.as-selections li.as-selection-item {
 	color: #2b3840;
-	font-size: 13px;
+	font-size: 12px;
 	font-family: "Lucida Grande", arial, sans-serif;
 	text-shadow: 0 1px 1px #fff;
+	padding: 2px 5px 0;
+	/*border: 1px solid #747474;
+	border-top-color: #747474;	
 	background-color: #ddeefe;
 	background-image: -moz-linear-gradient(top, #ddeefe, #bfe0f1);
 	background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#ddeefe), to(#bfe0f1));
-	border: 1px solid #acc3ec;
-	border-top-color: #c0d9e9;
-	padding: 2px 7px 2px 10px;
 	border-radius: 12px;
 	-webkit-border-radius: 12px;
 	-moz-border-radius: 12px;
 	box-shadow: 0 1px 1px #e4edf2;
 	-webkit-box-shadow: 0 1px 1px #e4edf2;
-	-moz-box-shadow: 0 1px 1px #e4edf2;
+	-moz-box-shadow: 0 1px 1px #e4edf2;*/
 }
 
 ul.as-selections li.as-selection-item:last-child {
@@ -50,12 +51,13 @@ ul.as-selections li.as-selection-item:last-child {
 
 ul.as-selections li.as-selection-item a.as-close {
 	float: right;
-	margin: 1px 0 0 7px;
+	margin: -4px 0 -2px 7px;
 	padding: 0 2px;
 	cursor: pointer;
-	color: #5491be;
+	color: #747474;
 	font-family: "Helvetica", helvetica, arial, sans-serif;
-	font-size: 14px;
+	font-size: 17px;
+	text-decoration:none;
 	font-weight: bold;
 	text-shadow: 0 1px 1px #fff;
 	-webkit-transition: color .1s ease-in;
@@ -78,12 +80,12 @@ ul.as-selections li.as-selection-item.blur a.as-close {
 }
 
 ul.as-selections li:hover.as-selection-item {
-	color: #2b3840;
+	/*color: #2b3840;
 	background-color: #bbd4f1;
 	background-image: -moz-linear-gradient(top, #bbd4f1, #a3c2e5);
 	background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#bbd4f1), to(#a3c2e5));
 	border-color: #6da0e0;
-	border-top-color: #8bb7ed;
+	border-top-color: #8bb7ed;*/
 }
 
 ul.as-selections li:hover.as-selection-item a.as-close {
@@ -91,7 +93,7 @@ ul.as-selections li:hover.as-selection-item a.as-close {
 }
 
 ul.as-selections li.as-selection-item.selected {
-	border-color: #1f30e4;
+	/*border-color: #1f30e4;*/
 }
 
 ul.as-selections li.as-selection-item a:hover.as-close {
@@ -109,10 +111,10 @@ ul.as-selections li.as-original {
 ul.as-selections li.as-original input {
 	border: none;
 	outline: none;
-	font-size: 13px;
+	font-size: 12px;
 	width: 120px;
 	height: 18px;
-	padding-top: 3px;
+	/*padding-top: 3px;*/
 	width:100%;
 }
 .catalog-product-view ul.as-selections li.as-original input {font-size:11px;}
@@ -123,7 +125,7 @@ ul.as-list {
 	list-style-type: none;
 	margin: 2px 0 0 0;
 	padding: 0;
-	font-size: 14px;
+	font-size: 12px;
 	color: #000;
 	font-family: "Lucida Grande", arial, sans-serif;
 	background-color: #fff;
@@ -230,6 +232,8 @@ ul.as-list,  x:-moz-any-link, x:default {
 BODY:first-of-type ul.as-list, x:-moz-any-link, x:default { /* Target FF 3.5+ */
 	border: none;
 }
+
+.as-results .as-message {/*	display:none;*/}
 
 .previous-selection {
     float: left;

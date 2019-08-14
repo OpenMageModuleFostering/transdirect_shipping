@@ -183,8 +183,7 @@
                         if(opts.showResultList){
                             if(opts.selectionLimit && $("li.as-selection-item", selections_holder).length >= opts.selectionLimit){
                                 results_ul.html('<li class="as-message">'+opts.limitText+'</li>');
-								//$("li.as-original input").attr("disabled");
-                                results_holder.show();
+                                //results_holder.show();   // Nayan Code Added
                             } else {
                                 keyChange();
                             }
@@ -393,13 +392,17 @@
                             values_input.val(values_input.val().replace(","+data[opts.selectedValuesProp]+",",","));
                             opts.selectionRemoved.call(this, item);
 							$("li.as-original input").removeAttr("disabled"); //Nayan Code Added
-                            input_focus = true;
+							$("ul.as-selections li.as-original").css("display","block");
+							$(".postcode_suburb #suburb").removeAttr("value");
+							$(".postcode_suburb #postcode").removeAttr("value");
+							input_focus = true;
                             input.focus();
                             return false;
                         });
                     org_li.before(item.html(data[opts.selectedItemProp]).prepend(close));
                     opts.selectionAdded.call(this, org_li.prev(), data[opts.selectedValuesProp]);
 					$("li.as-original input").attr("disabled",true); //Nayan Code Added
+					$("ul.as-selections li.as-original").css("display","none");
                     return org_li.prev();
                 }
 
