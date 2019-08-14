@@ -6,6 +6,7 @@ class Transdirect_Ship_Model_Carrier_Transdirect extends Mage_Shipping_Model_Car
 
 	public function collectRates(Mage_Shipping_Model_Rate_Request $request) {
 
+
 		//echo '<pre>';	 print_r($request); die('request');
 		if (!Mage::getStoreConfig('carriers/'.$this->_code.'/active')) {
 			return false;
@@ -100,9 +101,6 @@ class Transdirect_Ship_Model_Carrier_Transdirect extends Mage_Shipping_Model_Car
 				if($cart_total_weight > $cubic_weight) {
 					$cubic_weight = $cart_total_weight;
 				}
-
-
-
 				for($x = 1; $x <= $productQty; $x++) {
                     if ($cubic_weight > $order_box_size) {
 
@@ -322,11 +320,13 @@ class Transdirect_Ship_Model_Carrier_Transdirect extends Mage_Shipping_Model_Car
 		// }
 
 
-		function getCheapest($a, $b)
-		{
-			// Sort row primarily by total being cheapest total on top
-		  	return $a['total'] - $b['total'];
-		}
+        if(!function_exists(getCheapest)){
+            function getCheapest($a, $b)
+            {
+                // Sort row primarily by total being cheapest total on top
+                return $a['total'] - $b['total'];
+            }
+        }
 
 		
 		$display_quote = Mage::getStoreConfig('transdirect_section/displayoptions/quotedisplay'); 

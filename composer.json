@@ -1,7 +1,7 @@
 {
     "name": "OpenMageModuleFostering/Transdirect_Shipping",
     "type": "magento-module",
-    "license": "Open-Software-License-(OSL)",
+    "license": "OSL",
     "homepage": "",
     "description": "This Extension provides delivery quotes from Australia's largest Carriers in a Seamless checkout process.",
     "authors": [
