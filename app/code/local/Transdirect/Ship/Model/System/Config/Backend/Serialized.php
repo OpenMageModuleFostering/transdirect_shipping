@@ -10,15 +10,15 @@ class Transdirect_Ship_Model_System_Config_Backend_Serialized extends Mage_Admin
             $value = $this->getValue();
             $value = unserialize($value);
             if (empty($value)) {
-                $value = [];
+                $value = array();
                 foreach ($couriers->toOptionArray() as $courier) {
-                    $value[$courier['value']] = [
+                    $value[$courier['value']] = array(
                         'enable_courier' => '',
                         'courier' => $courier['label'],
                         'rename_group' => '',
                         'surcharge_courier' => 0,
                         'enable_surcharge_courier' => ''
-                    ];
+                    );
                 }
             } else {
                 foreach ($couriers->toOptionArray() as $courier) {
