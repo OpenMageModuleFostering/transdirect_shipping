@@ -1,23 +1,22 @@
 <?php
-
-
+require_once('app/Mage.php');
 $installer = $this;
+// $installer->startSetup();
+$installer = Mage::getResourceModel('catalog/setup', 'catalog_setup');
 
-/* $installer Mage_Core_Model_Resource_Setup */
+// $setup = new Mage_Eav_Model_Entity_Setup('core_setup');
 
 $installer->startSetup();
-$setup = new Mage_Eav_Model_Entity_Setup('core_setup');
 
-
-$setup->addAttribute('catalog_product', 'item_height', array(
+$this->addAttribute('catalog_product', 'item_height', array(
         'backend'       => '',
         'source'        => '',
-        'entity_model'	=> 'catalog/product',
+        'entity_model'  => 'catalog/product',
         'label'         => 'Item Height',
-        //'group'			=> 'ItemSize',
-		'group'			=> 'For Shipping Item Information',
+        //'group'           => 'ItemSize',
+        'group'         => 'For Shipping Item Information',
         'input'         => 'text',
-        'type'			=> 'text',
+        'type'          => 'text',
         'is_html_allowed_on_front' => true,
         'global'        => true,
         'visible'       => true,
@@ -27,15 +26,15 @@ $setup->addAttribute('catalog_product', 'item_height', array(
         'visible_on_front' => true
     ));
 
-$setup->addAttribute('catalog_product', 'item_width', array(
+$this->addAttribute('catalog_product', 'item_width', array(
         'backend'       => '',
         'source'        => '',
-        'entity_model'	=> 'catalog/product',
+        'entity_model'  => 'catalog/product',
         'label'         => 'Item Width',
-        //'group'			=> 'ItemSize',
-		'group'			=> 'For Shipping Item Information',
+        //'group'           => 'ItemSize',
+        'group'         => 'For Shipping Item Information',
         'input'         => 'text',
-        'type'			=> 'text',
+        'type'          => 'text',
         'is_html_allowed_on_front' => true,
         'global'        => true,
         'visible'       => true,
@@ -45,15 +44,15 @@ $setup->addAttribute('catalog_product', 'item_width', array(
         'visible_on_front' => true
     ));
 
-$setup->addAttribute('catalog_product', 'item_dim', array(
+$this->addAttribute('catalog_product', 'item_dim', array(
         'backend'       => '',
         'source'        => '',
-        'entity_model'	=> 'catalog/product',
+        'entity_model'  => 'catalog/product',
         'label'         => 'Item Length',
-        //'group'			=> 'ItemSize',
-		'group'			=> 'For Shipping Item Information',
+        //'group'           => 'ItemSize',
+        'group'         => 'For Shipping Item Information',
         'input'         => 'text',
-        'type'			=> 'text',
+        'type'          => 'text',
         'is_html_allowed_on_front' => true,
         'global'        => true,
         'visible'       => true,
@@ -63,15 +62,15 @@ $setup->addAttribute('catalog_product', 'item_dim', array(
         'visible_on_front' => true
     ));
 
-$setup->addAttribute('catalog_product', 'item_weight', array(
+$this->addAttribute('catalog_product', 'item_weight', array(
         'backend'       => '',
         'source'        => '',
-        'entity_model'	=> 'catalog/product',
+        'entity_model'  => 'catalog/product',
         'label'         => 'Item Weight',
-        //'group'			=> 'ItemSize',
-		'group'			=> 'For Shipping Item Information',
+        //'group'           => 'ItemSize',
+        'group'         => 'For Shipping Item Information',
         'input'         => 'text',
-        'type'			=> 'text',
+        'type'          => 'text',
         'is_html_allowed_on_front' => true,
         'global'        => true,
         'visible'       => true,
