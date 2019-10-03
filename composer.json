@@ -1,16 +1,19 @@
 {
-    "name": "OpenMageModuleFostering/Transdirect_Shipping",
+    "name": "OpenMageModuleFostering\/Transdirect_Shipping",
     "type": "magento-module",
     "license": "Open-Software-License",
     "homepage": "",
     "description": "This Extension provides delivery quotes from Australia's largest Carriers in a Seamless checkout process.",
     "authors": [
-    {
-        "name": "Joshua Oliver",
-        "email": "josh+transdirect@bywave.com.au"
-    }
-],
+        {
+            "name": "Joshua Oliver",
+            "email": "josh+transdirect@bywave.com.au"
+        }
+    ],
     "suggest": {
-        "magento-hackathon/magento-composer-installer": "*"
-    }
+        "magento-hackathon\/magento-composer-installer": "*"
+    },
+    "keywords": [
+        "openmage-module"
+    ]
 }
